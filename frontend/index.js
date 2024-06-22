@@ -38,7 +38,7 @@ function moduleProject2() {
       square.addEventListener('click', () => {
         // 👉 TASK 2 - Use a click handler to target a square 👈
         if (!square.classList.contains('targeted')){
-          document.querySelector('targeted').classList.remove('targeted')
+          document.querySelector('.targeted').classList.remove('targeted')
           square.classList.add('targeted')
         }
       })
@@ -69,10 +69,11 @@ function moduleProject2() {
 
   document.addEventListener('keydown', evt => {
     // 👉 TASK 3 - Use the arrow keys to highlight a new square 👈
+    
     let isUp = evt.key === keys.up
     let isDown = evt.key === keys.down
     let isLeft = evt.key === keys.left
-    let isRigth = evt.key === keys.right
+    let isRight = evt.key === keys.right
     
     let targeted = document.querySelector('targeted')
 
@@ -93,7 +94,7 @@ function moduleProject2() {
         targeted.classList.remove('targeted')
         targeted.previousElementSibling.classList.add(targeted)
       }
-    } else if (isRigth) {
+    } else if (isRight) {
       if (targeted.nextElementSibling) {
         targeted.classList.remove('targeted')
         targeted.nextElementSibling.classList.add('targeted')
